@@ -1,0 +1,115 @@
+$text-color: #e7e0e0;
+
+.main{
+  min-height: 100vh;
+  min-width: 100vh;
+  overflow-x: hidden;
+  background: rgb(111, 66, 171);
+  .main-userprofile{
+    height: 80vh;
+    width: 70%;
+    background: #e7e0e0;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    box-shadow: 0.5rem 0.5rem 3rem -1rem rgb(58,57,57); // свечение
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h1{
+    margin-top: 2rem;
+    margin-right: 5rem;
+    box-shadow: 0.5rem 0.5rem 3rem -1rem rgb(58,57,57);
+    border-radius: 1rem;
+    color: $text-color;
+    background: rgb(111, 66, 171);
+    width: 100%;
+    text-align: center;
+  }
+  .left-side,.right-side{
+    height: 90%;
+    width: 100%;
+    margin: 2rem;
+  }
+  .left-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15%;
+    .img-class{
+      height: 10rem;
+      #img-id{
+        height: 100%;
+        object-fit: cover;
+      }}
+    .profile-edit-btn{
+      background: rgb(111, 66, 171);
+      color: $text-color;
+      cursor: pointer;
+      border: none;
+      padding: 0.5rem 2.5rem;
+      transition: all 0.3s ease-in-out;
+      margin-top: 1rem;
+      &:hover{
+        box-shadow: 0.5rem 0.5rem 1rem 0.1rem gray;
+      }
+
+    }
+  }
+  .body{
+    height: 13rem;
+    margin-top: 2rem;
+  }
+  .user-name{
+    padding: 1.8rem 1rem;
+    text-align: left;
+    font-size: smaller;
+  }
+  .right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15%;
+    margin-top: 10rem;
+    .tab-plane{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .col2{
+        //margin-top: 2rem;
+      }
+    }
+
+    h4{
+      margin-left: 1rem;
+      float: left;
+      margin-bottom: 2.5rem;
+    }
+    .input-group{
+      width: 100%;
+      position: relative;
+      h5{
+        font-size: small;
+        font-weight: 300;
+        color: $text-color;
+        position: absolute;
+        left: 20%;
+        top: 0.1rem;
+        margin: 0.5rem auto;
+        background: rgb(111, 66, 171);
+      }
+      input{
+        margin: 1.2rem auto;
+        width: 60%;
+        border: none;
+        padding: 0.5rem 0.5rem;
+        box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem gray;
+
+        &:focus{
+          outline: none;
+        }
+      }
+
+    }
+  }
+}
