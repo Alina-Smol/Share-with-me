@@ -1,0 +1,27 @@
+import React from "react";
+
+function CardMini(){
+    return(
+        <div className="cart d-flex align-center p-15 m-15">
+            <img className="m-5" width={65} height={75} src="./photo1.jpg" alt="book"/>
+            <div className="book_mini m-5">
+                <p><b>Мастер и Маргарита</b></p>
+                <p className="author">Булгаков</p>
+                <span>10 дней</span>
+                <div className="user d-flex align-center mt-5">
+                    <img className="circle" width={20} height={20} src="./photo.jpg"/>
+                    <p className="ml-5">Бегемот</p>
+                </div>
+
+            </div>
+            <button data-toolpip="Отменить бронирование" className="cancel_booking m-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-x "
+                     viewBox="0 0 16 16">
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                </svg></button>
+        </div>
+    )
+}
+
+export default CardMini
