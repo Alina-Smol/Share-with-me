@@ -33,9 +33,9 @@ const Edit_profile = () =>{
                     <div className="img-class">
                         <img src={pics} id="img-id"/>
                     </div>
-                    <p><input type='sub09mit' className="profile-edit-btn" name="btnAddMore" value="Сохранить изменения"/></p>
+                    <p><input type='sub09mit' className="profile-edit-btn" name="btnAddMore" defaultValue="Сохранить изменения"/></p>
                     <Link to="/User_profile">
-                        <p><input type='submit' className="profile-edit-btn" name="btnAddMore" value="Отменить изменения"/></p>
+                        <p><input type='submit' className="profile-edit-btn" name="btnAddMore" defaultValue="Отменить изменения"/></p>
                     </Link>
                 </div>
                 <div className="right-side">
@@ -45,7 +45,7 @@ const Edit_profile = () =>{
                                 Имя пользователя
                             </h5>
                             <input type="text" name="Uname"
-                                   value={username} onChange={(e)=>{setusername(e.target.value)}}
+                                   defaultValue={username} onChange={(e)=>{setusername(e.target.value)}}
                                    id="user_name"/>
                         </div>
                         <div className='input-group'>
@@ -53,7 +53,7 @@ const Edit_profile = () =>{
                                 Номер общежития
                             </h5>
                             <input type="number" name="ncname"
-                                   value={number_c} onChange={(e)=>{setnumber_c(e.target.value)}}
+                                   defaultValue={number_c} onChange={(e)=>{setnumber_c(e.target.value)}}
                                    id="number_home"/>
                         </div>
                         <div className='input-group'>
@@ -61,7 +61,7 @@ const Edit_profile = () =>{
                                 Номер комнаты
                             </h5>
                             <input type="number" name="nrname"
-                                   value={number_r} onChange={(e)=>{setnumber_r(e.target.value)}}
+                                   defaultValue={number_r} onChange={(e)=>{setnumber_r(e.target.value)}}
                                    id="namber_room"/>
                         </div>
                         <div className='input-group'>
@@ -69,7 +69,7 @@ const Edit_profile = () =>{
                                 Email
                             </h5>
                             <input type="Email" name="email"
-                                   value={email} onChange={(e)=>{setemail(e.target.value)}}
+                                   defaultValue={email} onChange={(e)=>{setemail(e.target.value)}}
                                    id="email1"/>
                         </div>
                         <div className='input-group'>
@@ -77,7 +77,7 @@ const Edit_profile = () =>{
                                 Пароль
                             </h5>
                             <input type="password" name="pwd"
-                                   value={pwd1} onChange={(e)=>{setpwd1(e.target.value)}}
+                                   defaultValue={pwd1} onChange={(e)=>{setpwd1(e.target.value)}}
                                    id="pwd1"/>
                         </div>
                         <div className='input-group'>
@@ -85,7 +85,7 @@ const Edit_profile = () =>{
                                 Повторите пароль
                             </h5>
                             <input type="password" name="pwd"
-                                   value={pwd2} onChange={(e)=>{setpwd2(e.target.value)}}
+                                   defaultValue={pwd2} onChange={(e)=>{setpwd2(e.target.value)}}
                                    id="pwd2"/>
                         </div>
                         <div className='input-group'>
@@ -93,7 +93,7 @@ const Edit_profile = () =>{
                                 Описание
                             </h5>
                             <input type="text" name="dscrp"
-                                   value={description} onChange={(e)=>{setdescription(e.target.value)}}
+                                   defaultValue={description} onChange={(e)=>{setdescription(e.target.value)}}
                                    id="dscrp1"/>
                         </div>
 
