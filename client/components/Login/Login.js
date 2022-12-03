@@ -24,11 +24,11 @@ function Login() {
                     </div>
                     <h3>Вход</h3>
                     <form onSubmit={handlesubmit}>
-                        <label for="emil1">Логин</label>
+                        <label htmlFor="emil1">Логин</label>
                         <input placeholder="Введите свой email" type="email" value={emailval}
                             onChange={(e)=>{setemailval(e.target.value)}}
                                id="emil1"/>
-                        <label for="pwd1">Пароль</label>
+                        <label htmlFor="pwd1">Пароль</label>
                         <input placeholder="Введите свой пароль" type="password"
                         value={passval} onChange={(e)=>{setpassval(e.target.value)}}
                                id="pwd1"/>
