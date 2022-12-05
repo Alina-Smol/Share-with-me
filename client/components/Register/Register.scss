@@ -1,0 +1,113 @@
+$second-color: rgba(111, 66, 171, 0.73);
+
+.main-Register{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100vh;
+  weidth: 100vm;
+  overflow-x: hidden;
+
+  .left-side {
+    flex: 0.21;
+    background: rgba(111, 66, 171, 0.73);
+    .header {
+      height: 10rem;
+      margin-top: 2rem;
+      #logo-img {
+        margin-top: 1rem;
+        height: 90%;
+        object-fit: cover;
+      }
+    }
+      .body{
+          height: 13rem;
+          margin-top: 2rem;
+          background: white;
+        #registr-img {
+            height: 100%;
+            object-fit: cover;
+      }
+
+
+  }
+    p{
+      padding: 1.8rem 1rem;
+      text-align: center;
+      font-size: smaller;
+      color: white;
+    }
+  }
+    .right-side{
+      flex: 0.67;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .top-right{
+        float: right;
+        margin-right: 1rem;
+        font-size: small;
+        font-weight: 200;
+        #Link-signin{
+          text-decoration: none;
+          font-style: 600;
+          margin-left: .3rem;
+          cursor: pointer;
+          color: $second-color;
+          &:hover{
+            color: black;
+          }
+        }
+      }
+      .body-right{
+        height: 100%;
+        width: 100%;
+        .container{
+          padding-top: 1rem;
+          height: 90%;
+          width: 60%;
+          margin: 1.5rem auto;
+          box-shadow: 0rem 0rem 2rem 0.1rem $second-color;
+          border-radius: 0.5rem;
+          .input-group{
+            width: 100%;
+            position: relative;
+            h5{
+              font-size: small;
+              font-weight: 300;
+              color: gray;
+              position: absolute;
+              left: 20%;
+              top: 0.1rem;
+              margin: 0.5rem auto;
+              background: white;
+            }
+            input{
+              margin: 1.2rem auto;
+              width: 60%;
+              border: none;
+              padding: 0.5rem 0.5rem;
+              box-shadow: 0.1rem 0.1rem 0.3rem 0.1rem gray;
+
+              &:focus{
+                outline: none;
+              }
+            }
+
+          }
+          #sbtn{
+               width: 63%;
+               background: $second-color;
+               color: white;
+               cursor: pointer;
+               border: none;
+               padding: 0.5rem 2.5rem;
+               transition: all 0.3s ease-in-out;
+               &:hover{
+                 box-shadow: 0.5rem 0.5rem 1rem 0.1rem gray;
+               }
+             }
+        }
+      }
+    }
+}
