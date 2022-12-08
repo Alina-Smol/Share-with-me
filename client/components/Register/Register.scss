@@ -5,8 +5,8 @@ $second-color: rgba(111, 66, 171, 0.73);
   flex-direction: row;
   justify-content: center;
   height: 100vh;
-  weidth: 100vm;
   overflow-x: hidden;
+  width: 100vm;
 
   .left-side {
     flex: 0.21;
@@ -50,7 +50,6 @@ $second-color: rgba(111, 66, 171, 0.73);
         font-weight: 200;
         #Link-signin{
           text-decoration: none;
-          font-style: 600;
           margin-left: .3rem;
           cursor: pointer;
           color: $second-color;
@@ -111,3 +110,4 @@ $second-color: rgba(111, 66, 171, 0.73);
       }
     }
 }
+
