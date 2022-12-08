@@ -29,11 +29,11 @@
 
     {{#each rows}} <!--Объект, который вызывается из строки-->
         <tr>
-            <th scope="row">{{this.IDUser}}</th>
-            <td>{{this.Name}}</td>
-            <td>{{this.Surname}}</td>
-            <td>{{this.DormRoom}}</td>
-            <td>{{this.Login}}</td>
+            <th scope="row">{{this.id}}</th>
+            <td>{{this.name}}</td>
+            <td>{{this.surname}}</td>
+            <td>{{this.dormroom}}</td>
+            <td>{{this.login}}</td>
             <td class="text-end">
                 <a href="/viewuser/{{this.IDUser}}" type="button" class="btn btn-light btn-small"><i class="bi bi-eye"></i> View</a>
                 <a href="/edituser/{{this.IDUser}}" type="button" class="btn btn-light btn-small"><i class="bi bi-pencil"></i>
