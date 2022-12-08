@@ -18,7 +18,7 @@ exports.viewall = (req,res) =>{
         console.log('Connected as ID ' + connection.threadId);
 
         // User the connection
-        connection.query('SELECT * FROM user WHERE IDUser = ?',[req.params.id], (err, rows) =>{ // Сюда id пользователя
+        connection.query('SELECT * FROM user WHERE id = ?',[req.params.id], (err, rows) =>{ // Сюда id пользователя
             // When done with the connection
             connection.release();
 
