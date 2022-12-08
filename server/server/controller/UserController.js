@@ -8,7 +8,29 @@ const pool = mysql.createPool({
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
-});
+}); 
+
+exports.view = (req,res) =>{
+    // Router
+        pool.getConnection((err, connection) => {
+        if(err) throw err; // not connected
+        console.log('Connected as ID ' + connection.threadId);
+
+        // User the connection
+        connection.query('SELECT * FROM user', (err, rows) =>{
+            // When done with the connection
+            connection.release();
+
+            if(!err){
+                res.render('home', {rows});
+            } else {
+                console.log(err);
+            }
+            console.log('The data from user table: \n', rows)
+
+        });
+    });
+}
 
 // View user
 exports.viewall = (req,res) =>{
