@@ -1,13 +1,30 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import pics from "./pic_reg.png";
-import './User_profile.scss'
-import {Link} from 'react-router-dom'
+// import './User_profile.scss'
+// import {Link} from 'react-router-dom'
+import { useState } from "react";
+import Axios from "axios";
 
 
-const User_profile = () =>{
+function User_profile(){
+    const[aboutuser, setaboutuser] = useState([])
+    useEffect(() => {
+        Axios.get("http://localhost:5005").then((result) => { // result - всё, что придёт с бэкенда
+            setaboutuser(result.data);
+        })})
+
+
+
+   /* const getUser = () => {
+        Axios.get("http://localhost:5005/userprofile").then((result) => { // result - всё, что придёт с бэкенда
+             setaboutuser(result.data);
+        });
+    }
+*/
     return(
         <div className="main">
             <div className="main-userprofile">
+
 {/*
         <form method="">
 */}
@@ -19,18 +36,22 @@ const User_profile = () =>{
                     <div className="img-class">
                         <img src={pics} id="img-id"/>
                     </div>
-                   <Link to="/Edit_profile">
+                 {/*  <Link to="/Edit_profile">
                        <p><input type='submit' className="profile-edit-btn" name="btnAddMore" value="Изменить профиль"/></p>
-                   </Link>
+                   </Link>*/}
             </div>
             <div className="right-side">
+                <div>
+                {aboutuser.map((val,key) => {
+                    return (
                 <div className="tab-plane" role="tabpanel">
+
                     <div className="row">
                     <div className="col1">
                     <label><h4>Email:</h4></label>
                     </div>
                     <div className="col2">
-                        Al93983
+                        {val.login}
                     </div>
                     </div>
                     <div className="row">
@@ -38,7 +59,16 @@ const User_profile = () =>{
                             <label><h4>Имя пользователя:</h4></label>
                         </div>
                         <div className="col2">
-                            Алина
+                            {val.name}
+                        </div>
+                    </div>
+
+                    <div className="row">
+                        <div className="col1">
+                            <label><h4>Фамилия:</h4></label>
+                        </div>
+                        <div className="col2">
+                            {val.surname}
                         </div>
                     </div>
 
@@ -47,7 +77,7 @@ const User_profile = () =>{
                             <label><h4>Номер общежития:</h4></label>
                         </div>
                         <div className="col2">
-                           15
+                            {val.dormroom}
                         </div>
                     </div>
                     <div className="row">
@@ -55,7 +85,7 @@ const User_profile = () =>{
                         <label><h4>Номер комнаты:</h4></label>
                     </div>
                     <div className="col2">
-                        <p>512</p>
+                        <p>{val.roomnumber}</p>
                     </div>
                     </div>
                         <div className="row">
@@ -63,9 +93,13 @@ const User_profile = () =>{
                                 <label><h4>Описание:</h4></label>
                             </div>
                             <div className="col2">
-                               <p>_____________</p>
+                               <p>{val.connection}</p>
                         </div>
                         </div>
+                </div>
+                    )
+
+                })};
                 </div>
             </div>
 {/*
