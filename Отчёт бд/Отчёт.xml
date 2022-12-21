@@ -1,0 +1,101 @@
+<ISSPECS>
+  <DESCRIPTION>
+    <TITLE>Bookcrossing</TITLE>
+    <SUBJ>Буккроссинг</SUBJ>
+  </DESCRIPTION>
+  <DATA>
+    <ENTITY ent_id="author">
+      <PROPERTY>idauthor</PROPERTY>
+      <PROPERTY>surname</PROPERTY>
+      <PROPERTY>name</PROPERTY>
+    </ENTITY>
+    <ENTITY ent_id="language">
+      <PROPERTY>idlanguage</PROPERTY>
+      <PROPERTY>language</PROPERTY>
+    </ENTITY>
+    <ENTITY ent_id="book">
+      <PROPERTY>idbook</PROPERTY>
+      <PROPERTY>name</PROPERTY>
+      <PROPERTY>idlanguage</PROPERTY>
+    </ENTITY>
+    <ENTITY ent_id="bookinstance">
+      <PROPERTY>idbookinstance</PROPERTY>
+      <PROPERTY>idbook</PROPERTY>
+      <PROPERTY>iduser</PROPERTY>
+      <PROPERTY>bookperiod</PROPERTY>
+      <PROPERTY>review</PROPERTY>
+      <PROPERTY>waitingforconfirmation</PROPERTY>
+    </ENTITY>
+    <ENTITY ent_id="book_has_author">
+      <PROPERTY>idbook</PROPERTY>
+      <PROPERTY>idauthor</PROPERTY>
+    </ENTITY>
+    <ENTITY ent_id="booked">
+      <PROPERTY>idbooked</PROPERTY>
+      <PROPERTY>idbookinstance</PROPERTY>
+      <PROPERTY>iduser</PROPERTY>
+      <PROPERTY>databooked</PROPERTY>
+      <PROPERTY>status</PROPERTY>
+      
+    </ENTITY>
+    <ENTITY ent_id="genre">
+      <PROPERTY>idgenre</PROPERTY>
+      <PROPERTY>genre</PROPERTY>
+    </ENTITY>
+    <ENTITY ent_id="genre_has_book">
+      <PROPERTY>idgenre</PROPERTY>
+      <PROPERTY>idbook</PROPERTY>
+    </ENTITY>
+    <ENTITY ent_id="user">
+      <PROPERTY>iduser</PROPERTY>
+      <PROPERTY>name</PROPERTY>
+      <PROPERTY>surname</PROPERTY>
+      <PROPERTY>dormroom</PROPERTY>
+      <PROPERTY>roomnumber</PROPERTY>
+      <PROPERTY>connection</PROPERTY>
+      <PROPERTY>login</PROPERTY>
+      <PROPERTY>password</PROPERTY>
+    </ENTITY>
+
+    <RELATIONSHIPS ent_ids = "book book_has_author">
+      <PROPERTY>ONE TO MANY</PROPERTY>
+    </RELATIONSHIPS>
+    <RELATIONSHIPS ent_ids = "author book_has_author">
+      <PROPERTY>ONE TO MANY</PROPERTY>
+    </RELATIONSHIPS>
+    <RELATIONSHIPS ent_ids = "book book_has_genre">
+      <PROPERTY>ONE TO MANY</PROPERTY>
+    </RELATIONSHIPS>
+    <RELATIONSHIPS ent_ids = "genre book_has_genre">
+      <PROPERTY>ONE TO MANY</PROPERTY>
+    </RELATIONSHIPS>
+    <RELATIONSHIPS ent_ids = "language book">
+      <PROPERTY>ONE TO MANY</PROPERTY>
+    </RELATIONSHIPS>
+    <RELATIONSHIPS ent_ids = "book bookinstance">
+      <PROPERTY>ONE TO MANY</PROPERTY>
+    </RELATIONSHIPS>
+    <RELATIONSHIPS ent_ids = "user booked">
+      <PROPERTY>ONE TO MANY</PROPERTY>
+    </RELATIONSHIPS>
+    <RELATIONSHIPS ent_ids = "booked way_property">
+      <PROPERTY>ONE TO ONE</PROPERTY>
+    </RELATIONSHIPS>
+    <RELATIONSHIPS ent_ids = "user bookinstance">
+      <PROPERTY>ONE TO MANY</PROPERTY>
+    </RELATIONSHIPS>
+    <CONSTRAINT> </CONSTRAINT>
+  </DATA>
+  <TECHSPEC>
+    <TYPE>Web-development</TYPE>
+    <DEVTOOLS>
+      <DEV>Express</DEV>
+      <DEV>Node js</DEV>
+    </DEVTOOLS>
+    <DBMS>
+      <TITLE>MySQL</TITLE>
+      <VERSION>8</VERSION>
+      <REASONING>Удобное взаимодействие с входными данными.</REASONING>
+    </DBMS>
+  </TECHSPEC>
+</ISSPECS>
