@@ -1,3 +1,5 @@
+#Во запросах, кроме login, registration, передается Headers: "Authorization Bearer {login}"
+
 # Авторизация 
 
 login
