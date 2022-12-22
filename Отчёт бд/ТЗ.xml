@@ -86,7 +86,7 @@
 <L> - idlanguage - int </L>
 </LIST>
 </BLIST>
-
+  
 <PART>
 <SUBTITLE> Пользовательские Роли </SUBTITLE>
 
@@ -102,6 +102,18 @@
 </BLIST>
 
 </PART>
+  
+  <ROLES>
+    <ROLE title="USER">
+	  <RESPONSIBILITY>Возможность просматривать книги</RESPONSIBILITY>
+	  <RESPONSIBILITY>Возможность удалять экземляр книги</RESPONSIBILITY>
+	  <RESPONSIBILITY>Возможность добавлять экземляр книги</RESPONSIBILITY>
+	  <RESPONSIBILITY>Возможность бронировать книгу</RESPONSIBILITY>
+	  <RESPONSIBILITY>Возможность просматривать карточку книги</RESPONSIBILITY>
+	  <RESPONSIBILITY>Возможность просматривать информацию о пользователе</RESPONSIBILITY>
+    </ROLE>
+  </ROLES>
+  
 
 <PART>
 <SUBTITLE> UI/API </SUBTITLE>
