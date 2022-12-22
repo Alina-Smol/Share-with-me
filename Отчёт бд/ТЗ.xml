@@ -73,9 +73,8 @@
 <BLIST>
 <BRANCH> Язык </BRANCH>
 <LIST>
-<L> - idgenre - int(auto_increment)</L>
-<L> - Название жанра - varchar(30) </L>
-<L> - iduser - int </L>
+<L> - idlanguage - int(auto_increment)</L>
+<L> - Язык - varchar(30) </L>
 </LIST>
 </BLIST>
 
