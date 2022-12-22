@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task SYSTEM "Task.dtd">
+
+<TASK>
+<TITLE> Tripple. Техническое задание </TITLE>
+
+<PART>
+<SUBTITLE> Разработчики </SUBTITLE>
+<LIST>
+<L> - Штоколова Елизавета Викторовна </L>
+<L> - Смолина Алина Андреевна </L>
+</LIST>
+</PART>
+
+<PART>
+<SUBTITLE> Описание </SUBTITLE>
+<TEXT> Веб-приложение для буккроссинга: </TEXT>
+
+<LIST>
+<L>Поиск по фильтрам</L> 
+<L>Конфигуратор персонального компьютера</L>
+<L>Магазин</L> 
+</LIST> 
+
+</PART>
+<PART>
+<SUBTITLE> Предметная область </SUBTITLE>
+<TEXT> веб-приложение для буккроссинга </TEXT>
+</PART>
+
+<PART>
+<SUBTITLE> Данные </SUBTITLE>
+<BLIST>
+<BRANCH> Пользователь </BRANCH>
+<LIST>
+<L> - Имя пользователя</L>
+<L> - Фамилия пользователя </L>
+<L> - Пароль - varchar(8) </L>
+<L> -  Логин </L>
+</LIST>
+</BLIST>
+
+<BLIST>
+<BRANCH> Автор </BRANCH>
+<LIST>
+<L> - idauthor - int  (auto_increment) </L>
+<L> - surname - varchar(20) </L>
+<L> - name -  varchar(20) </L>
+</LIST>
+</BLIST>
+
+<BLIST>
+<BRANCH> Экземпляр книги </BRANCH>
+<LIST>
+<L> - idbookinstance - int(auto_increment)</L>
+<L> - idbook - int </L>
+<L> - iduser - int </L>
+<L> -  bookperiod(количество дней, на которое полтзователь готов одолжить книгу) - int </L>
+<L> -  bookperiod(количество дней, на которое полтзователь готов одолжить книгу) - int </L>
+<L> -  waitingforconfirmation(статус книги: книга свободна(1), ожидается подтверждение бронирования(2), забронировано(3)) - int </L>
+</LIST>
+</BLIST>
+
+<BLIST>
+<BRANCH> Жанр </BRANCH>
+<LIST>
+<L> - idgenre - int(auto_increment)</L>
+<L> - Название жанра - varchar(30) </L>
+<L> - iduser - int </L>
+</LIST>
+</BLIST>
+
+<BLIST>
+<BRANCH> Язык </BRANCH>
+<LIST>
+<L> - idgenre - int(auto_increment)</L>
+<L> - Название жанра - varchar(30) </L>
+<L> - iduser - int </L>
+</LIST>
+</BLIST>
+
+<BLIST>
+<BRANCH> Книга </BRANCH>
+<LIST>
+<L> - idbook - int(auto_increment)</L>
+<L> - Название - varchar(30) </L>
+<L> - idlanguage - int </L>
+</LIST>
+</BLIST>
+
+<PART>
+<SUBTITLE> Пользовательские Роли </SUBTITLE>
+
+
+<BLIST>
+<BRANCH> Пользователь </BRANCH>
+<LIST>
+<L> - Возможность просматривать книги </L>
+<L> - Возможность удалять экземляр книги </L>
+<L> - Возможность добавлять экземляр книги </L>
+<L> - Возможность бронировать книгу </L>
+</LIST>
+</BLIST>
+
+</PART>
+
+<PART>
+<SUBTITLE> UI/API </SUBTITLE>
+<BLIST>
+<BRANCH> Страницы: </BRANCH>
+<LIST>
+<L> - Главная страница </L>
+<L> - Личный кабинет </L>
+<L> - Регистрация </L>
+<L> - Вход </L>
+<L> - Карточка книги </L>
+<L> - Страница пользователя </L>
+</LIST>
+</BLIST>
+</PART>
+
+<PART>
+<SUBTITLE> Технологии разработки </SUBTITLE>
+<BLIST>
+<BRANCH> Язык программирования: </BRANCH>
+<LIST>
+<L> - Front: CSS, Javascript, React </L>
+<L> - Back: Node JS, express </L>
+</LIST>
+</BLIST>
+
+<BLIST>
+<BRANCH> СУБД </BRANCH>
+<LIST>
+<L> - MySQL </L>
+</LIST>
+</BLIST>
+</PART>
+
+<PART>
+<SUBTITLE> Тестирование </SUBTITLE>
+</PART>
+</TASK>
