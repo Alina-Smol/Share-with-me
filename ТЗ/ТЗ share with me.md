@@ -32,11 +32,11 @@ surname varchar(20)
 name varchar(20) 
 patronymic varchar(20)
 
-book_has_author
+book_has_author:
  idbook int PK 
  idauthor int PK
  
-bookinstance
+bookinstance:
   idbookinstance int AI PK 
   idbook int  
   iduser int 
@@ -44,15 +44,15 @@ bookinstance
   review text 
   waitingforconfirmation tin
   
-genre
+genre:
   idgenre int AI PK 
   genre varchar(30)
   
-genre_has_book
+genre_has_book:
  idgenre int PK 
  idbook int PK
 
-language
+language:
   idlanguage int AI PK 
   language varchar(20)
 
