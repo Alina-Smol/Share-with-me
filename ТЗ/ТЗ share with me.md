@@ -10,22 +10,51 @@
 
 Пользователь:
 
-- имя - varchar(20),
-- фамилия - varchar(20),
-- пароль varchar(8),
-- номер общежития - int,
-- номер комнаты - int,
-- аватарка - image
-- логин(почта) - varchar(30)
+iduser int AI PK 
+name varchar(20) 
+surname varchar(20) 
+dormroom int 
+roomnumber int 
+connection varchar(50) 
+login varchar(30) 
+password varchar(100) 
+idgithub int 
 
 Книги: 
 
-- наименование - varchar(100),
-- автор - varchar(60),
-- жанр - varchar(30),
-- срок бронирования - int,
-- описание - blob
-- забронировано - boolean
+idbook int AI PK 
+name varchar(100) 
+idlanguage int
+
+Автор:
+idauthor int AI PK 
+surname varchar(20) 
+name varchar(20) 
+patronymic varchar(20)
+
+book_has_author
+ idbook int PK 
+ idauthor int PK
+ 
+bookinstance
+  idbookinstance int AI PK 
+  idbook int  
+  iduser int 
+  bookperiod int 
+  review text 
+  waitingforconfirmation tin
+  
+genre
+  idgenre int AI PK 
+  genre varchar(30)
+  
+genre_has_book
+ idgenre int PK 
+ idbook int PK
+
+language
+  idlanguage int AI PK 
+  language varchar(20)
 
 **Для каждого элемента данных - ограничения** 
 
