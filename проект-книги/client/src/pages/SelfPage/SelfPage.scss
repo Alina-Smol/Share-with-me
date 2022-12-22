@@ -1,0 +1,28 @@
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 500px;
+  //z-index: auto;
+  .group-left{
+    margin-right: 5px;
+    p{
+      font-weight: bold;
+      width: 250px;
+      padding: 8px;
+      //padding-right: 10px;
+    }
+  }
+  .group-right{
+    p{
+      border: rgba(179, 178, 178, 0.62);
+      background: rgba(201, 201, 201, 0.24);
+      border-radius: 4px;
+      padding: 8px;
+      width: 250px;
+      min-width: 300px;
+      min-height: 20px;
+    }
+//display: flex;
+  }
+}

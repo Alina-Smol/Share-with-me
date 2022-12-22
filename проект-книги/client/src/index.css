@@ -1,0 +1,33 @@
+
+body{
+    font-family: 'Inter', system-ui;
+}
+.wholeScreen{
+    background: white;
+    margin: 15px;
+    border-radius: 25px;
+    /*height: 96vh;*/
+
+}
+.h-screen{
+    /*margin: 15px;*/
+    min-width: 700px;
+    min-height: 600px;
+}
+.CardBooks{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    /*grid-template-rows: 200px;*/
+    grid-column-gap:20px;
+    grid-row-gap: 5px;
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: center;
+}
+.buttoncreate{
+    /*border: 2px solid #AA96DA;*/
+    /*border-radius: 50%;*/
+    /*padding: 6px;*/
+    color: #AA96DA;
+    margin-right: 20px;
+}

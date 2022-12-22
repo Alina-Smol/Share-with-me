@@ -1,0 +1,71 @@
+
+.card{
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  margin: 15px;
+  min-width: 330px;
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  background: white;
+  //margin: 20px;
+  img{
+    margin: 10px 30px 10px 10px;
+  }
+  .contentcard{
+    margin: 10px 10px 10px 0px;
+    .textBook{
+      margin: 0;
+      padding-bottom: 8px;
+      font-weight: 700;
+      font-size: 14px ;
+    }
+    .text{
+      margin: 0px;
+      padding-bottom: 8px;
+      font-weight: 400;
+      font-size: 14px ;
+    }
+    .user{
+      display: flex;
+      align-items: center;
+      padding-bottom: 8px;
+      p{
+        margin: 0px 0px 0px 5px;
+        font-weight: 400;
+        font-size: 14px ;
+      }
+      .circle{
+        border-radius: 50%;
+        margin: 0;
+      }
+    }
+    .mybutton{
+      margin: 10px 0px 5px 5px;
+      padding: 5px 10px;
+      //margin-left: 20px;
+      border-color: #AA96DA;
+      border-width: 2px;
+      border-radius: 8px;
+      background: #AA96DA;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      &:hover{
+        color: #ffffff;
+        background: #6639A6;
+        box-shadow: black;
+        border-color: #6639A6;
+        box-shadow: 5px 3px 3px lightgray;
+        transition: opacify 0.5s ease-in-out;
+        cursor:pointer;
+      }
+    }
+  }
+  &:hover{
+    box-shadow: 5px 3px 3px lightgray;
+    transition: opacify 0.3s ease-in-out;
+    transform: translateY(-5px);
+
+  }
+}

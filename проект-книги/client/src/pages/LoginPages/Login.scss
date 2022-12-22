@@ -1,0 +1,107 @@
+$main-color: #6639A6;
+
+.main-login{
+  min-height: 100vh;
+  min-width: 100vh;
+  overflow-x: hidden;
+  //background: $main-color;
+  .login-contain{
+    height: 80vh;
+    width: 35%;
+    background: white;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    box-shadow: 0.5rem 0.5rem 3rem -1rem rgb(58,57,57); // свечение
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .link{
+    text-decoration: none;
+    color: $main-color;
+  }
+  .left-side{
+
+    margin: 2rem;
+   // box-shadow: 1rem 1rem 3rem 0.4rem $main-color; // свечение
+    height: 80%;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;align-items: center;
+    .img-class{
+      height: 5rem;
+      #img-id{
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .buttongit{
+      border-radius: 8px;
+      border: 2px solid #AA96DA;
+      margin-bottom: 5px;
+    }
+
+    input{
+      display: block;
+     // border: none;
+      height: 2rem;
+      //width: 70%;
+      //margin:auto;
+      margin-bottom: 1.5rem;
+      padding: 0.2rem 1rem;
+      color:gray;
+      border-radius: 7px;
+      border: 1px solid gray;
+      &:focus{
+        outline: none;
+        border: none;
+      }
+      transition: all 0.5s ease;
+      &:hover{
+        outline: 0.5px solid;
+        box-shadow: 1px 1px 6px -1px $main-color;
+      }
+    }
+    label{
+      display: block;
+      text-align: left;
+      margin: auto;
+      width: 78%;
+      font-size: small;
+      color:gray;
+      margin-bottom: 0.5rem;
+    }
+    #sub_butt{
+
+      width: 100%;
+      background: white;
+      color: #AA96DA;
+      cursor: pointer;
+      border: 2px solid #AA96DA;
+      padding: 0.5rem 2.5rem;
+      transition: all 0.3s ease-in-out;
+      border-radius: 7px;
+      // font-size: medium;
+
+
+      &:hover{
+        background: #6639A6;
+        color: white;
+        border: 2px solid #6639A6;}
+      //
+      //width: 100%;
+      //color: white;
+      //background: $main-color;
+      //border: none;
+      //cursor: pointer;
+      //padding: 0.5rem 1rem;
+      //transition: all 0.5s ease;
+      //
+      //&:hover{
+      //  box-shadow: 0.5px 0.5px 6px -1px gray;
+      //  transform: translateY(-3px);
+      //}
+    }
+  }
+}

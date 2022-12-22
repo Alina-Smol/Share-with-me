@@ -1,0 +1,20 @@
+.Button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  ul{
+    display: flex;
+    margin-bottom: 30px;
+    li{
+      margin: 10px 30px;
+      padding: 3px 10px;
+      border: 2px solid #AA96DA;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #AA96DA;
+      list-style-type: none;
+    }
+  }
+
+}
