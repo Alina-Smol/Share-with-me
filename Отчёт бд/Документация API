@@ -1,0 +1,272 @@
+# Авторизация 
+
+login
+    type: "post"
+    url: /auth/login
+    request:
+      login: string
+      password: string
+    response:
+      message:string
+      login: string
+      passwordValidation: string
+
+registration
+    type:"post"
+    url: /auth/registration
+    request:
+      name: string
+      surname: string
+      dormroom: number
+      roomnumber: number
+      connection: string
+      login: string
+      password: string
+    response:
+      message: string 
+
+# Карточка пользователя  
+
+getUser
+    type:"get"
+    url: /getuser/{iduser}
+    request:
+      iduser: number
+    response:
+      user:
+         {
+        iduser: number
+        name: string
+        surname: string
+        dormroom: number
+        roomnumber: number
+        connection: string
+        login: string
+        password: string
+          }
+
+# Главная страница 
+
+findBook
+    type:"post"
+    url: auth/findbook
+    request:
+      search: string
+      login: login
+    response:
+         {
+        namebook: number 
+        authorname: string
+        authorsurname: string
+        idbookinstance: int
+        bookperiod: int
+        iduser: string
+        username: string
+        usersurname: string
+        } 
+
+bookRequestButton # Запрос книги 
+    type:"post"
+    url: auth/bookrequestbutton
+    request:
+      login: login
+      inform: {
+         {
+        namebook: number 
+        authorname: string
+        authorsurname: string
+        idbookinstance: int
+        bookperiod: int
+        iduser: string
+        username: string
+        usersurname: string
+        } 
+      }
+    response:
+         {
+        message: string
+        }
+
+# Создание экземпляра книги 
+
+createfindBook
+    type:"post"
+    url: auth/createfindbook
+    request:
+      search: string
+      login: login
+    response:
+         {
+        idbook: string
+        namebook: number 
+        authorname: string
+        authirsurname: string
+        } 
+
+createBook
+    type:"post"
+    url: auth/createbook
+    request:
+      login: login
+    response:
+         message: string 
+
+# Книги 
+
+getMyBooks 
+    type:"get"
+    url: auth/createfindbook
+    request:
+      login: login
+    response:
+        books{
+        namebook: number 
+        authorname: string
+        authirsurname: string
+        idbookinstance: number
+        bookperiod: number
+        iduser: string
+        waitingforconfirmation: number
+        }
+
+bookRequest  
+    type:"get"
+    url: auth/bookrequest
+    request:
+      login: login
+          
+    response:
+        books{
+        idbooked: number
+        databooked: string
+        status: number
+        namebook: number 
+        waitingforconfirmation: number
+        authorname: string
+        authorsurname: string
+        idbookinstance: int
+        bookperiod: int
+        iduser: string
+        username: string
+        usersurname: string
+        }
+
+bookRequest  
+    type:"get"
+    url: auth/bookrequest2
+    request:
+      login: login
+    response:
+        books{
+        idbooked: number
+        databooked: string
+        status: number
+        namebook: number 
+        waitingforconfirmation: number
+        authorname: string
+        authorsurname: string
+        idbookinstance: int
+        bookperiod: int
+        iduser: string
+        username: string
+        usersurname: string
+        }
+
+cancellationReservation # Отменить запрос на книгу 
+    type:"post"
+    url: auth/cancellationreservation
+    request:
+      login: login     
+    response:
+        message: string 
+
+bookingConfirmation # Подтверждение запроса владельцем книги 
+    type:"post"
+    url: auth/bookingconfirmation
+    request:
+      inform{
+         {
+        namebook: number 
+        authorname: string
+        authorsurname: string
+        idbookinstance: int
+        bookperiod: int
+        iduser: string
+        username: string
+        usersurname: string
+        }
+      }
+    response:
+        message: string
+
+returnBook
+    type:"get"
+    url: auth/returnedbook
+    request:
+      login: login 
+    response:
+        books{
+          idbooked: string 
+          date: number
+          idbookinstance: number 
+          status: number
+          iduser: number
+          waitingforconfirmation: number
+          namebook: number 
+          authorname: string
+          authorsurname: string
+          idbook: number
+          bookperiod: number
+          username: string
+          usersurname: string
+        } 
+
+deleteBook    
+    type:"post"
+    url: auth/deletebook
+    request:
+      waitingforconfirmation: number
+      idbookinstance: number 
+    response:
+        message: string 
+
+# Личный кабинет 
+
+getYourSelf 
+    type:"get"
+    url: auth/user
+    request:
+      login: login
+    response:
+         {
+        iduser: number
+        name: string
+        surname: string
+        dormroom: number
+        roomnumber: number
+        connection: string
+        login: string
+        password: string
+        } 
+
+# Карточка книги 
+
+aboutBook
+    type:"get"
+    url: auth/aboutbook/{idbookinstance} 
+    request:
+       idbookinstance: number 
+    response:
+        books{
+          namebook: string 
+          review: string 
+          idbookinstance: number 
+          bookperiod: number
+          iduser: number
+          language: string  
+          author:[{authorname: string
+          authorsurname: string}]         
+          idbook: number
+          genre: []
+        } 
+ 
